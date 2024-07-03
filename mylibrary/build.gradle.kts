@@ -1,6 +1,11 @@
+import io.grpc.internal.SharedResourceHolder.release
+
 plugins {
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
+group = "com.hzkj.sanner"
+version = "1.0.0"
 
 android {
     namespace = "com.hzkj.mylibrary"
@@ -29,7 +34,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
